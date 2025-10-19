@@ -15,4 +15,11 @@ const tellTimeET = function(){
 	return timeNow.getHours() + ":" + timeNow.getMinutes() + ":" + timeNow.getSeconds();
 }
 
-module.exports = {longDate: tellDateET, weekDay: tellWeekDayET, time: tellTimeET};
+const partOfDay = function(){
+	let hour = new Date().getHours();
+	if(hour < 6) return "öö";
+	if(hour < 12) return "hommik";
+	if(hour < 18) return "pärastlõuna";
+	return "õhtu";
+}
+module.exports = {fullDate: tellDateET, longDate: tellDateET, weekDay: tellWeekDayET, time: tellTimeET, partOfDay: partOfDay};
