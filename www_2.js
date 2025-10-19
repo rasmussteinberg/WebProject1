@@ -45,6 +45,7 @@ http.createServer(function (req, res) {
         return res.end();
       }
 
+      // Vaatame, et tegemist oleks stringiga -> eraldame texti semikooloni jargi -> eemaldame ekstra whitespaced -> eemaldame tuhjad itemid
       const items = String(data || "")
         .split(";")
         .map((s) => s.trim())
