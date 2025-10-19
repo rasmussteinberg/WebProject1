@@ -24,15 +24,7 @@ http.createServer(function (req, res) {
     res.write(pageBanner);
     res.write(pageBody);
     res.write(pageLink);
-    res.write(
-      "\n\t<p>Täna on " +
-        dateET.fullDate() +
-        ", " +
-        dateET.weekDay() +
-        ", " +
-        dateET.partOfDay() +
-        ".</p>"
-    );
+    res.write("\n\t<p>Täna on " + dateET.fullDate() + ", " + dateET.weekDay() + ", " + dateET.partOfDay() + ".</p>");
     res.write(pageEnd);
     return res.end();
   }
@@ -45,15 +37,7 @@ http.createServer(function (req, res) {
       res.write(pageBanner);
       res.write(pageBody);
       res.write(pageLink);
-      res.write(
-        "\n\t<p>Täna on " +
-          dateET.fullDate() +
-          ", " +
-          dateET.weekDay() +
-          ", " +
-          dateET.partOfDay() +
-          ".</p>"
-      );
+      res.write("\n\t<p>Täna on " + dateET.fullDate() + ", " + dateET.weekDay() + ", " + dateET.partOfDay() + ".</p>");
 
       if (err) {
         res.write("<p>Ei suutnud vanasõnu lugeda.</p>");
@@ -95,15 +79,7 @@ http.createServer(function (req, res) {
     res.write(pageBanner);
     res.write(pageBody);
     res.write(pageLink);
-    res.write(
-      "\n\t<p>Täna on " +
-        dateET.fullDate() +
-        ", " +
-        dateET.weekDay() +
-        ", " +
-        dateET.partOfDay() +
-        ".</p>"
-    );
+    res.write("\n\t<p>Täna on " + dateET.fullDate() + ", " + dateET.weekDay() + ", " + dateET.partOfDay() + ".</p>");
     res.write(
       '<p>Minu lemmik hobi on <a href="https://nba.com/">NBA vaatamine</a> ja <a href="https://www.spotify.com/">muusika kuulamine</a>.</p>'
     );
