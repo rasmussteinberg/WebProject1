@@ -45,11 +45,14 @@ http.createServer(function (req, res) {
         return res.end();
       }
 
-      // Vaatame, et tegemist oleks stringiga -> eraldame texti semikooloni jargi -> eemaldame ekstra whitespaced -> eemaldame tuhjad itemid
-      const items = String(data || "")
-        .split(";")
-        .map((s) => s.trim())
-        .filter(Boolean);
+      const items = [];
+      const rawItems = String(data || "").split(";");
+      for (let i = 0; i < rawItems.length; i++) {
+        const s = rawItems[i] ? rawItems[i].trim() : "";
+        if (s) {
+          items.push(s);
+        }
+      }
 
       if (items.length === 0) {
         res.write("<p>(Vanasõnu ei leitud)</p>");
